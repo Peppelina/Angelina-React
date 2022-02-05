@@ -1,0 +1,43 @@
+.app-wrapper {
+    
+    display: grid;
+
+    grid-template-areas: /* как выстраиваются, по псевдониму*/
+    "h h" 
+    "n c"; 
+    
+    grid-template-rows: 60px 1fr; /* 2 строки*/
+    grid-template-columns: 2fr 10fr; /* 2*/
+    /*grid-gap: 10px;*/
+}
+
+.header {
+    grid-area: h; /* псеводоним*/
+    background-color: #F08080;
+}
+
+.header img {
+    width: 30px;
+}
+
+.nav {
+    grid-area: n;
+    background-color: #FFB6C1;
+    
+}
+
+.content {
+    grid-area: c;
+    background-color: #FFFFE0;
+    
+}
+
+.content img {
+    width: 700px;
+    height: 200px;
+}
+
+.ava img {
+    width: 200px;
+    height: 200px;
+}
