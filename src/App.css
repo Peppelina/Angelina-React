@@ -11,33 +11,10 @@
     /*grid-gap: 10px;*/
 }
 
-.header {
-    grid-area: h; /* псеводоним*/
-    background-color: #F08080;
-}
 
-.header img {
-    width: 30px;
-}
 
-.nav {
-    grid-area: n;
-    background-color: #FFB6C1;
+
     
-}
 
-.content {
-    grid-area: c;
-    background-color: #FFFFE0;
-    
-}
 
-.content img {
-    width: 700px;
-    height: 200px;
-}
 
-.ava img {
-    width: 200px;
-    height: 200px;
-}

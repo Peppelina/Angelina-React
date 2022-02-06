@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
 import Header from './components/Header';
-import Navbar from './components/Navbar';
 import Profile from './components/Profile';
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <div className='app-wrapper'>
+    <div className ='app-wrapper'>
       <Header/>
       <Navbar/>
       <Profile/>
