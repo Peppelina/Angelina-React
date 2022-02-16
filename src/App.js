@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
+
+
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -14,8 +16,8 @@ const App = (props) => {
                 <Navbar state ={props.state.navbar}/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/profile' element={<Profile state ={props.state.profilePage}/>}/>
-                        <Route path='/' element={<Profile state ={props.state.profilePage}/>}/>
+                        <Route path='/' element={<Profile state ={props.state.profilePage}/>}/> {/* по умолчанию откррывает страницу профиля*/}
+                        <Route path='/profile' element={<Profile state ={props.state.profilePage} addPost ={props.addPost}/>}/>
                         <Route path='/dialogs/*' element={<Dialogs state={props.state.messagesPage}/>}/>
                     </Routes>
                 </div>
