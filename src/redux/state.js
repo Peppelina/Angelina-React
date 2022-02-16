@@ -13,8 +13,8 @@ let state = {
             {id: '1', name: 'Angelina'},
             {id: '2', name: 'Viktoria'},
             {id: '3', name: 'Vadim'},
-            {id: '3', name: 'Anton'},
-            {id: '3', name: 'Igor'}
+            {id: '4', name: 'Anton'},
+            {id: '5', name: 'Igor'}
         ],
         messages: [
             {id: '1', message: 'Hi'},
@@ -22,6 +22,15 @@ let state = {
             {id: '3', message: 'Hello'},
             {id: '4', message: 'Hello'},
             {id: '5', message: 'How are you'},
+        ]
+    },
+    navbar: {
+        friendsBlock: [
+            {id:'1', name:'Viktoria', avatarUrl:'https://klike.net/uploads/posts/2018-10/1539499416_1.jpg'},
+            {id:'2', name:'Angelina', avatarUrl:'https://klike.net/uploads/posts/2019-07/medium/1564314059_1.jpg'},
+            {id:'3', name:'Igor', avatarUrl:'https://klike.net/uploads/posts/2019-07/medium/1564314087_2.jpg'},
+            {id:'4', name:'Vadim', avatarUrl:'https://klike.net/uploads/posts/2019-07/medium/1564314090_3.jpg'},
+            {id:'5', name:'Anton', avatarUrl:'https://klike.net/uploads/posts/2019-07/medium/1564314170_12.jpg'},
         ]
     }
 }

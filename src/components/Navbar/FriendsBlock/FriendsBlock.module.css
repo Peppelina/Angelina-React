@@ -1,0 +1,10 @@
+.friendsBlock {
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 8px;
+    height: 300px;
+    overflow-y: auto; /*прокрутка*/
+}
+
+
+
