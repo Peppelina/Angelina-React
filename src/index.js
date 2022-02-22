@@ -6,6 +6,7 @@ import store from "./redux/state";
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(<App state={state}
+                         store={store}
                          dispatch={store.dispatch.bind(store)} /*bind() - ф-я чтоб функция взялась из store*//>,
                         document.getElementById('root'));
 }
