@@ -1,15 +1,32 @@
 import React from 'react';
 import classes from './Post.module.css';
+import {setLikeActionCreator} from "../../../../redux/state";
+
 
 const Post = (props) => {
+
+    let onClickLikeBtn = () => {
+        props.dispatch(setLikeActionCreator(props.post.id))
+    }
+
+    let checkLike = () => {
+        if (props.post.isLike === false) return classes.likeBtnFalse
+        else return classes.likeBtnTrue
+    }
+
     return (
         <div className={classes.item}>
             <img src='https://cdn.kanobu.ru/articles/pics/34e02571-ee14-4253-8185-37a975558e5b.jpg'/>
-            {props.message}
+            {props.post.message}
             <div>
-                <span>
-                    Кол-во лайков: {props.like}
-                </span>
+                <div>
+                    Кол-во лайков: {props.post.like}
+                </div>
+                <div>
+                    <button onClick={onClickLikeBtn} className={checkLike()}>
+                        Нравится
+                    </button>
+                </div>
             </div>
         </div>
     );

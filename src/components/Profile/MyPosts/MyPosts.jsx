@@ -5,9 +5,13 @@ import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../red
 
 const MyPosts = (props) => {
 
-    let postsElements = props.posts.map(post => {return <Post message={post.message} like={post.like}/>})
+    let postsElements = props.posts.map(post => {
+        return <Post post={post} dispatch = {props.dispatch}/>
+    })
 
     let newPostElement = React.createRef();
+
+
 
     let onClickAddPost = () => {
         props.dispatch(addPostActionCreator());

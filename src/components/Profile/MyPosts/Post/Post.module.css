@@ -7,3 +7,16 @@
     height: 50px;
     border-radius: 30px;
 }
+
+.likeBtnTrue {
+    background-color: red;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.likeBtnFalse {
+    background-color: darkgray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
