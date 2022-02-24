@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Post.module.css';
-import {setLikeActionCreator} from "../../../../redux/state";
+import {setLikeActionCreator} from "../../../../redux/profile-reducer";
 
 
 const Post = (props) => {
