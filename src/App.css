@@ -1,5 +1,6 @@
 .app-wrapper {
-    
+    width: 1140px;
+    margin: 0 auto;
     display: grid;
 
     grid-template-areas: /* как выстраиваются, по псевдониму*/
@@ -7,13 +8,15 @@
     "n c"; 
     
     grid-template-rows: 60px 1fr; /* 2 строки*/
-    grid-template-columns: 2fr 10fr; /* 2*/
-    /*grid-gap: 10px;*/
+    grid-template-columns: 3fr 9fr; /* 2*/
+    gap: 20px 15px; /*20 по у, 15 по х*/
 }
 
 .app-wrapper-content {
     grid-area: c;
-    background-color: #FFFFE0;
+    background-color: #FFF4FF;
+    border-radius: 8px;
+
 }
 
 

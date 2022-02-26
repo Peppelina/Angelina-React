@@ -2,7 +2,18 @@ const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
 const SET_LIKE = 'SET_LIKE';
 
-const profileReducer = (state,action) => {
+let initialState = {
+    posts: [
+        {id: 1, message: 'Hi', like: 15, isLike: false},
+        {id: 2, message: 'Hello', like: 10, isLike: false},
+        {id: 3, message: 'Way', like: 1, isLike: false},
+        {id: 4, message: 'Super', like: 22, isLike: false},
+        {id: 5, message: 'How are you', like: 34, isLike: false}
+    ],
+    newPostText: ''
+}
+
+const profileReducer = (state = initialState,action) => {
     debugger;
     switch (action.type) {
         case ADD_POST:

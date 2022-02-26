@@ -14,14 +14,14 @@
     display: flex;
     align-items: center;
     margin-top: 5px;
-    border: 1px deeppink solid;
+    border: 1px #A200FF solid;
     border-radius: 10%;
     cursor: pointer;
     transition: 0.3s all;
 }
 
 .friendsItem:hover {
-    background-color: #DB7093;
+    background-color: #A200FF;
 }
 
 .name {

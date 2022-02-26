@@ -1,12 +1,10 @@
 import React from 'react';
 import classes from './Post.module.css';
-import {setLikeActionCreator} from "../../../../redux/profile-reducer";
-
 
 const Post = (props) => {
 
     let onClickLikeBtn = () => {
-        props.dispatch(setLikeActionCreator(props.post.id))
+        props.setLike(props.post.id);
     }
 
     let checkLike = () => {

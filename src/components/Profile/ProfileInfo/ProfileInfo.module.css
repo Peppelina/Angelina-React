@@ -1,6 +1,7 @@
-
- img {
+ .infoImg img {
+     display: block;
     width: 300px;
+     margin: 0 auto;
 }
  .descriptionBlog {
      padding: 10px;

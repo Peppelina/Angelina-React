@@ -9,14 +9,16 @@
 }
 
 .likeBtnTrue {
-    background-color: red;
+    background-color: #FA8072;
     margin-top: 5px;
     margin-bottom: 5px;
+    padding: 4px;
 }
 
 .likeBtnFalse {
-    background-color: darkgray;
+    background-color: #D3D3D3;
     margin-top: 5px;
     margin-bottom: 5px;
+    padding: 4px;
 
 }

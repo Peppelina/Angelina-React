@@ -1,12 +1,16 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
+    width: 827px;
+    margin: 20px;
+    margin-left: 5px;
 }
 
 .dialogsItems {
     padding: 10px;
 }
 .dialog {
+    color: #AE5BEB;
     display: block;
     Border: 1px solid black;
     width: 70px;
@@ -15,7 +19,7 @@
     margin: 5px;
 }
 .dialogsItems .active {
-    color: gold;
+    color: #441463;
     display: block;
     Border: 1px solid black;
     width: 70px;
