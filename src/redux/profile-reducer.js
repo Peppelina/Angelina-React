@@ -25,20 +25,20 @@ const profileReducer = (state = initialState,action) => {
                 like: 0,
                 isLike: false
             }
-            let stateCopy = {...state}
-            stateCopy.posts = [...state.posts]
-            stateCopy.posts.push(newPost);
-            stateCopy.newPostText = '';
-            return stateCopy;
+           return {
+                ...state,
+                posts:[...state.posts, newPost],
+                newPostText: ''
+            }
         }
         case UPDATE_NEW_POST_TEXT: {
-            let stateCopy = {...state}
-            stateCopy.newPostText = action.newText;
-            return stateCopy;
+            return {
+                ...state,
+                newPostText: action.newText
+            }
         }
         case SET_LIKE: {
-            let stateCopy = {...state}
-            let new_posts = stateCopy.posts.map(post => {
+            let new_posts = state.posts.map(post => {
                 if (post.id === action.postId)
                     if (post.isLike === false) {
                         post.like++;
@@ -49,8 +49,10 @@ const profileReducer = (state = initialState,action) => {
                     }
                 return post
             })
-            stateCopy.posts = new_posts;
-            return stateCopy;
+            return {
+                ...state,
+                posts: new_posts
+            }
         }
         default:
             return state;
