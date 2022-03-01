@@ -8,26 +8,18 @@ const MyPosts = (props) => {
         return <Post post={post} setLike={props.setLike}/>
     })
 
-    let newPostElement = React.createRef();
-
-    let onClickAddPost = () => {
-        props.addPost();
-    }
-
-    let onPostChange = () => {
-        let text = newPostElement.current.value; /* берем значение введеное в textarea*/
-        props.updateNewPostText(text);
-    }
     return (
         <div className={classes.postsBlock}>
             <div>
                 <h3>My posts</h3>
                 <div>
                     <div>
-                        <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+                        <textarea onChange = { (event) =>
+                                {props.updateNewPostText(event.target.value) } }
+                                  value={props.newPostText}/>
                     </div>
                     <div>
-                        <button onClick={onClickAddPost}>Add post</button>
+                        <button onClick={props.addPost}>Add post</button>
                     </div>
                 </div>
             </div>

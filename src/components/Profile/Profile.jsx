@@ -5,10 +5,11 @@ import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 
 const Profile = (props) => {
+
     return (
         <div className={classes.wrapperProfile}>
             <ProfileInfo/>
-            <MyPostsContainer store={props.store}/>
+            <MyPostsContainer/>
         </div>
 
     );

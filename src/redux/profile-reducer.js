@@ -14,9 +14,9 @@ let initialState = {
 }
 
 const profileReducer = (state = initialState,action) => {
-    debugger;
+
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
             let newPost = {
                 id: state.posts[state.posts.length - 1].id + 1,
                 //берем id последнего элемента и ему +1
@@ -25,14 +25,20 @@ const profileReducer = (state = initialState,action) => {
                 like: 0,
                 isLike: false
             }
-            state.posts.push(newPost);
-            state.newPostText = '';
-            return state;
-        case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText;
-            return state;
-        case SET_LIKE:
-            let new_posts = state.posts.map(post => {
+            let stateCopy = {...state}
+            stateCopy.posts = [...state.posts]
+            stateCopy.posts.push(newPost);
+            stateCopy.newPostText = '';
+            return stateCopy;
+        }
+        case UPDATE_NEW_POST_TEXT: {
+            let stateCopy = {...state}
+            stateCopy.newPostText = action.newText;
+            return stateCopy;
+        }
+        case SET_LIKE: {
+            let stateCopy = {...state}
+            let new_posts = stateCopy.posts.map(post => {
                 if (post.id === action.postId)
                     if (post.isLike === false) {
                         post.like++;
@@ -43,7 +49,9 @@ const profileReducer = (state = initialState,action) => {
                     }
                 return post
             })
-            state.posts = new_posts;
+            stateCopy.posts = new_posts;
+            return stateCopy;
+        }
         default:
             return state;
     }
@@ -62,7 +70,8 @@ export const updateNewPostTextActionCreator = (text) => {
     }
 }
 
-export const setLikeActionCreator = (postId) => {
+export const
+    setLikeActionCreator = (postId) => {
     return {
         type: SET_LIKE,
         postId: postId
