@@ -32,7 +32,7 @@ const dialogsReducer = (state = initialState,action) => {
             return {
                 ...state,
                 newMessageText : '',
-                messages:[...state.messages,{id:1, message:text} ]
+                messages:[...state.messages,{id:6, message:text} ]
             }
         default:
             return state;

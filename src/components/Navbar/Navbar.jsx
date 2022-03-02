@@ -26,6 +26,9 @@ const Navbar = (props) => {
                 <div className={classes.item}>
                     <NavLink to='/settings' className={activeDialogsItem()}>Settings</NavLink>
                 </div>
+                <div className={classes.item}>
+                    <NavLink to='/users' className={activeDialogsItem()}>Users</NavLink>
+                </div>
             </div>
             <FriendsBlock state={props.state.friendsBlock}/>
         </nav>
