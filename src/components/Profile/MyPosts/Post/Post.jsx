@@ -8,8 +8,9 @@ const Post = (props) => {
     }
 
     let checkLike = () => {
-        if (props.post.isLike === false) return classes.likeBtnFalse
-        else return classes.likeBtnTrue
+       return props.post.isLike ?  classes.likeBtnTrue : classes.likeBtnFalse
+        /*if (props.post.isLike === false) return classes.likeBtnFalse
+        else return classes.likeBtnTrue*/
     }
 
     return (
