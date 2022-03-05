@@ -1,0 +1,14 @@
+.page {
+
+}
+
+.currentPage {
+    font-weight: bold;
+}
+
+.wrapperPageNumbers {
+    display: flex;
+    gap: 5px;
+    width: 250px;
+    overflow-x: auto;
+}
