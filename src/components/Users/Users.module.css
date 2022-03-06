@@ -1,9 +1,10 @@
 .page {
-
+    cursor: pointer;
 }
 
 .currentPage {
     font-weight: bold;
+    cursor: pointer;
 }
 
 .wrapperPageNumbers {
