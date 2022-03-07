@@ -1,28 +1,35 @@
 import React from "react";
 import classes from './UserItem.module.css'
 import userPhoto from '../../../images/user.png'
+import {NavLink} from "react-router-dom";
 
 const UserItem = (props) => {
     return (
-        <div>
-            <span>
-                <div className={classes.avatarUser}><img src={props.user.photos.small != null ? props.user.photos.small : userPhoto} alt=""/></div>
+        <div className={classes.item}>
+            <div className={classes.photoButton}>
+                <div className={classes.avatarUser}>
+                    <NavLink to={'profile/' + props.user.id} >
+                        <img src={props.user.photos.small != null ? props.user.photos.small : userPhoto} alt=""/>
+                    </NavLink>
+                </div>
                 <div>
                     {props.user.followed
                         ? <button onClick={() => {props.unfollow(props.user.id)}}>Unfollow</button>
                         : <button onClick={() => {props.follow(props.user.id)}}>Follow</button>}
                 </div>
-            </span>
+            </div>
 
-            <span>
-                <div>{props.user.name}</div>
-                <div>{props.user.status}</div>
-            </span>
+            <div className={classes.itemInfo}>
+                <div className={classes.nameStatus}>
+                    <div className={classes.name}>{props.user.name}</div>
+                    <div className={classes.status}>{props.user.status ? props.user.status : 'Статус'}</div>
+                </div>
 
-            <span>
-                <div>{'props.user.location.city'}</div>
-                <div>{'props.user.location.country'}</div>
-            </span>
+                <div className={classes.cityCountry}>
+                    <div className={classes.city}>{'city'}</div>
+                    <div className={classes.country}>{'country'}</div>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,11 +1,67 @@
-.avatarUser img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*чтоб не плющилась*/
-    border-radius: 100%;
+.item {
+    display: flex;
+    padding: 5px;
+}
+
+.photoButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .avatarUser {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
+
+.avatarUser img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photoButton button {
+    background-color: #DFC1FF;
+    width: 150px;
+    color: white;
+    padding: 10px 15px;
+    border: 0;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.itemInfo {
+    border: #DFC1FF solid;
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+.nameStatus {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+
+}
+
+.status {
+
+}
+
+.cityCountry {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

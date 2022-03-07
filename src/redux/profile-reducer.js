@@ -1,6 +1,7 @@
 const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
 const SET_LIKE = 'SET_LIKE';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
     posts: [
@@ -10,7 +11,8 @@ let initialState = {
         {id: 4, message: 'Super', like: 22, isLike: false},
         {id: 5, message: 'How are you', like: 34, isLike: false}
     ],
-    newPostText: ''
+    newPostText: '',
+    profile: null
 }
 
 const profileReducer = (state = initialState,action) => {
@@ -36,6 +38,9 @@ const profileReducer = (state = initialState,action) => {
                 ...state,
                 newPostText: action.newText
             }
+        }
+        case SET_USER_PROFILE: {
+            return {...state, profile: action.profile}
         }
         case SET_LIKE: {
             let new_posts = state.posts.map(post => {
@@ -79,4 +84,12 @@ export const
         postId: postId
     }
 }
+
+export const
+    setUsersProfile = (profile) => {
+        return {
+            type: SET_USER_PROFILE,
+            profile: profile
+        }
+    }
 export default profileReducer
